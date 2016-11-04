@@ -14,6 +14,10 @@ namespace Dmvcc
             LinkedList<string> l = new LinkedList<string>();
             l.Add("F");
             l.Add("E");
+            l.Print();
+            l.Reverse();
+            l.Print();
+            l.Reverse();
             l.Add("D");
             l.Add("C");
             l.Add("B");
@@ -21,6 +25,19 @@ namespace Dmvcc
             l.Add("test");
             l.Delete("test");
             //l.Delete("notfound"); // throws InvalidOperation exception
+            l.Print();
+            l.Reverse();
+            Console.WriteLine("Called reverse. Now Print:");
+            l.Print();
+            l.Add("1");
+            l.Add("2");
+            l.Add("3");
+            l.Add("4");
+            l.Add("5");
+            Console.WriteLine("Added 1-5. Now Print:");
+            l.Print();
+            l.Reverse();
+            Console.WriteLine("Called Reverse.  Now Print:");
             l.Print();
             Console.ReadLine();
         }
@@ -103,6 +120,7 @@ namespace Dmvcc
             Head.Next = null;
             Head = lastKnownHead;
         }
+
 
 	    public void Print()
 	    {
